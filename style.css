@@ -4,40 +4,125 @@
     box-sizing: border-box;
 }
 body{
+    background-color: lightgray;
     height: 100vh;
     width: 100%;
-    background-color: lightgray;
+    position: relative;
 }
-.nav{
+nav{
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    height: 15%;
 }
-.nav img{
+.logo{
+    padding-left: 2rem;
+    cursor: pointer;
     height: 60px;
-    margin: 20px 0 0 20px;
 }
-.nav ul{
-    margin: 20px 60px 0 auto;
+nav ul{
+    padding-right: 2rem;
 }
-.nav ul li{
+nav ul li{
     display: inline-block;
     padding-left: 2rem;
     font-weight: 500;
     cursor: pointer;
 }
-a{
+nav ul li a{
     text-decoration: none;
-    color: rgb(114, 113, 110);
+    color: black;
+}
+nav ul li a:hover{
+    color: red;
 }
 .content{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    
+    height: 85%;
+}
+.info{
+    margin-left: 7rem;
+    margin-top: 10rem;
+    width: 50%;
+}
+.info h2{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 25px;
+}
+.info span{
+    color: red;
+}
+.info p{
+    color: black;
+    line-height: 22px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.cv{
+    background: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: red;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+.social-media img{
+    height: 30px;
+    width: 30px;
+    background: gray;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* .img-box{
+    width: 45%;
+    height: 80%;
     position: relative;
+    bottom: 0;
+    right: 450px;
+}
+.img-box img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
 }
 .back{
     height: 300px;
 }
-.top{
-    position: absolute;
+.main{
+    height: 700px;
+} */
+.img-box{
+    position: relative;
+    width: 50%;
 }
-.top img{
+.img-box img{
     position: absolute;
+    overflow: hidden;
+    transition: bottom 1s;
 }
+.back{
+    height: 500px;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+}
+.main{
+    height: 700px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-60%);
+}
+.img-box:hover .back{
+    bottom: 50px;
+}
+
